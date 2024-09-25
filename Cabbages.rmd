@@ -50,7 +50,7 @@ favstats(VitC~Cult,data=veggy)
 ```{r}
 plot(VitC~Cult,data=veggy)
 ```
-
+C52 average is higher the highest it goes is around 75 and c39 is around 55 for its highest.
 
 ### Numerical Descriptive Results
 
@@ -59,23 +59,22 @@ plot(VitC~Cult,data=veggy)
 ```{r}
 favstats(VitC~Cult,data=veggy)
 ```
-
+Based off the median you can tell c52 averages is higher because its median is 64.5 and c39 is 51.0 the difference between the two is 13.5. 
 
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
-
-
 ```{r}
 model1 <- aov(VitC~Cult,data=veggy)
 summary.aov(model1)
 ```
-
+The means have a huge difference between the two and the values are also a huge difference 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-I don't see no relationship there is a difference in the averages so the answer would have to be HA because there is a major difference between c39 and c52.
+Yes there is a relationship if the mean are low it is related to c38 are higher it is related to the c52 based off the graphs. My answer is that it is a alternative hypothesis (ha) because it states that the average for c52 are significantly different then c38.
+
 
 
 
