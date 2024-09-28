@@ -20,8 +20,8 @@ veggy <- cabbages
  The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
  
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
-I think there is a difference between the averages .
 
+Yes there is a difference because the p-value is 3.4 so it isn't equal to 0 meaning there is a true difference between c39 and c52.
 
 
 
@@ -30,8 +30,11 @@ I think there is a difference between the averages .
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+VitC is numerical 
 
-I think it is numerical so I will use the numerical file.
+Cult is Categorical 
+
+We used the numerical~helper file 
 
 
 # Results
@@ -42,6 +45,7 @@ I think it is numerical so I will use the numerical file.
 ```{r}
 favstats(VitC~Cult,data=veggy)
 ```
+Based off the median you can tell c52 averages is higher because its median is 64.5 and c39 is 51.0 the difference between the two is 13.5. The Min for c39 is 41 and the min for c52 is 47. C39 mean is 51.5 and c52 mean is 64.4, c52 mean is higher. 
 
 
 ### Graphical Descriptive Results
@@ -50,7 +54,7 @@ favstats(VitC~Cult,data=veggy)
 ```{r}
 plot(VitC~Cult,data=veggy)
 ```
-C52 average is higher the highest it goes is around 75 and c39 is around 55 for its highest.
+C52 average is higher the highest it goes is around 75 and c39 is around 55 for its highest. the average for c52 is much higher than c32 as you can tell by the graph.
 
 ### Numerical Descriptive Results
 
@@ -64,16 +68,17 @@ Based off the median you can tell c52 averages is higher because its median is 6
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+
 ```{r}
-model1 <- aov(VitC~Cult,data=veggy)
-summary.aov(model1)
+t.test(VitC~Cult,data=veggy)
 ```
-The means have a huge difference between the two and the values are also a huge difference 
+
+The Inferential shows that c52 is higher with a 64.4 mean. The p-value is 3.405 , The Df is 56.376. It is also telling us that it is a alternative hypothesis because the true difference between group c39 and c52 is not equal to 0. It has a 95 percent confidence interval.
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-Yes there is a relationship if the mean are low it is related to c38 are higher it is related to the c52 based off the graphs. My answer is that it is a alternative hypothesis (ha) because it states that the average for c52 are significantly different then c38.
+Yes there is a relationship if the mean are low it is related to c38 are higher it is related to the c52 based off the graphs. My answer is that it is a alternative hypothesis (ha) because it has a true difference between the two groups and difference is not equal to 0.
 
 
 
